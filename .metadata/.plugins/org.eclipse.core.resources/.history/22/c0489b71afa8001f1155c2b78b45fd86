@@ -1,0 +1,82 @@
+package Linkedlist;
+
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class linkedlist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<String> months = new LinkedList<>();
+
+        
+        months.add("May");
+        months.add("June");
+        months.add("July");
+        months.add("August");
+        months.add("April");
+        months.add("November");
+
+       
+        months.addLast("December");
+
+      
+        months.addFirst("January");
+
+        
+        months.add(2, "March");   
+        months.add(3, "February"); 
+
+        months.add(5, "September");  
+        months.add(6, "October");   
+
+        System.out.println("Linked List of Months: " + months);
+
+        System.out.println("\nEven Months:");
+        for (int i = 1; i < months.size(); i += 2) {
+            System.out.println(months.get(i));
+        }
+
+        System.out.println("\nOdd Months:");
+        for (int i = 0; i < months.size(); i += 2) {
+            System.out.println(months.get(i));
+        }
+
+        System.out.println("\nUsing Iterator to fetch all months:");
+        Iterator<String> iterator = months.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        System.out.println("\nFirst and Last month of the year:");
+        System.out.println("First Month: " + months.getFirst());
+        System.out.println("Last Month: " + months.getLast());
+
+        months.remove("July");
+        System.out.println("\nLinked List after removing 'July': " + months);
+
+        boolean containsWinterMonth = months.contains("December") || months.contains("January") || months.contains("February");
+        System.out.println("\nDoes the LinkedList contain any winter month? " + (containsWinterMonth ? "Yes" : "No"));
+
+     
+        System.out.println("\nUsing peek() to fetch the first and last months:");
+        System.out.println("First Month (peek): " + months.peekFirst());
+        System.out.println("Last Month (peek): " + months.peekLast());
+
+        System.out.println("\nRemoving the first and last months using poll():");
+        String firstMonth = months.pollFirst();
+        String lastMonth = months.pollLast();
+        System.out.println("Removed First Month: " + firstMonth);
+        System.out.println("Removed Last Month: " + lastMonth);
+        System.out.println("Linked List after removal: " + months);
+    }
+}
+
+
+		
+
+
+		 
+
+
+

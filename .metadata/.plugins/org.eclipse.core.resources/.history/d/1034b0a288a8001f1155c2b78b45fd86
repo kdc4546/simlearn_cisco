@@ -1,0 +1,48 @@
+package cisco.java.program;
+
+interface Employee{
+	public void getEmployee();
+	public void display();
+}
+
+interface MNC{
+	public void getMNC();
+	public void display();
+}
+interface Demo extends Employee, MNC{
+	
+}
+public class InterfaceDemo implements Demo{
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Demo d = new InterfaceDemo();
+		d.display();
+		d.getEmployee();
+		d.getMNC();
+
+	}
+
+	@Override
+	public void getEmployee() {
+		// TODO Auto-generated method stub
+		System.out.println("You are in getEmployee method");
+		
+	}
+
+	@Override
+	public void display() {
+		// TODO Auto-generated method stub
+		System.out.println("You are in display method");
+		
+	}
+
+	@Override
+	public void getMNC() {
+		// TODO Auto-generated method stub
+		System.out.println("You are in MNC method");
+		
+	}
+
+}

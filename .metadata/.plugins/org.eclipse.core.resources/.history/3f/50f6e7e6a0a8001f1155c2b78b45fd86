@@ -1,0 +1,70 @@
+package cisco.java.program;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class array {
+	    public static void main(String[] args) {
+	        // Create an ArrayList
+	        ArrayList<String> list = new ArrayList<>();
+	        
+	        // Add 6 fruits
+	        list.add("Apple");
+	        list.add("Banana");
+	        list.add("Mango");
+	        list.add("Grapes");
+	        list.add("Pineapple");
+	        list.add("Orange");
+
+	        // Add 2 cities
+	        list.add("New York");
+	        list.add("Paris");
+
+	        // Add 2 hobbies
+	        list.add("Reading");
+	        list.add("Singing");
+
+	        // Print the ArrayList
+	        System.out.println("ArrayList: " + list);
+
+	        // Remove one hobby ("Singing")
+	        list.remove("Singing");
+
+	        // Search for "cricket"
+	        if (list.contains("cricket")) {
+	            System.out.println("Found 'cricket' in the list.");
+	        } else {
+	            System.out.println("'cricket' not found in the list.");
+	        }
+
+	        // Remove one city and one fruit
+	        list.remove("Paris");  // Removing one city
+	        list.remove("Mango");  // Removing one fruit
+
+	        // Print the 4th and 6th elements (index 3 and 5 respectively)
+	        if (list.size() > 5) {
+	            System.out.println("4th element: " + list.get(3));
+	            System.out.println("6th element: " + list.get(5));
+	        } else {
+	            System.out.println("Not enough elements to display 4th and 6th elements.");
+	        }
+
+	        // Replace hobby "Singing" with new hobby "Dancing"
+	        // (Already removed "Singing", so we add "Dancing")
+	        list.add("Dancing");
+
+	        // Reverse the ArrayList
+	        Collections.reverse(list);
+	        System.out.println("Reversed ArrayList: " + list);
+
+	        // Add "Kerala" at the 4th position and "Mango" at the 2nd position
+	        list.add(3, "Kerala");  // 4th position (index 3)
+	        list.add(1, "Mango");   // 2nd position (index 1)
+
+	        // Final ArrayList after all changes
+	        System.out.println("Final ArrayList: " + list);
+	    }
+	}
+
+
+

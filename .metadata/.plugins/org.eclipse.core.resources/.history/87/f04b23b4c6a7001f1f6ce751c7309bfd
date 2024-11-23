@@ -1,0 +1,19 @@
+package cisco.java.program;
+
+public class Variables {
+	
+	public int intrest(int p,int r,int t) {
+		int SI = p * r * t;
+		int Amt = SI + p;
+		System.out.println("The SimpleIntrest = " + SI);
+		System.out.println("The Amount = " + Amt);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Variables var = new Variables();
+		var.intrest(20,40,50);
+
+	}
+
+}

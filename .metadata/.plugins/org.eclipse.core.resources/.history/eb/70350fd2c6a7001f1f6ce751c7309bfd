@@ -1,0 +1,28 @@
+package cisco.java.program;
+
+public class Variables {
+	
+
+	    // Method to calculate Simple Interest and Total Amount
+	    public int interest(int p, int r, int t) {
+	        int SI = (p * r * t) / 100;  // Simple Interest formula
+	        int Amt = SI + p;  // Total amount is principal + simple interest
+	        
+	        // Print the results
+	        System.out.println("The Simple Interest = " + SI);
+	        System.out.println("The Total Amount = " + Amt);
+	        
+	        // Return the Simple Interest value (or you could return Amt if needed)
+	        return SI;
+	    }
+
+	    public static void main(String[] args) {
+	        Variables var = new Variables();
+	        
+	        // Call the interest method with example values for p (principal), r (rate), and t (time)
+	        var.interest(20, 40, 50);
+
+
+	}
+
+}

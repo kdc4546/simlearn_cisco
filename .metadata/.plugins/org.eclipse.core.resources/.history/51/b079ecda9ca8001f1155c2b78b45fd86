@@ -1,0 +1,54 @@
+package cisco.java.program;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+	public class Interface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedHashSet L1 = new LinkedHashSet();
+
+        L1.add(10);           
+        L1.add(20);          
+        L1.add(3.14f);        
+        L1.add(1.618f);       
+        L1.add('A');          
+        L1.add('B');         
+        L1.add(true);        
+
+        System.out.println("LinkedHashSet L1: " + L1);
+
+        LinkedHashSet<Integer> L2 = new LinkedHashSet<>();
+
+        Scanner scanner = new Scanner(System.in);
+
+        
+        System.out.println("Enter 6 different integers for LinkedHashSet L2:");
+
+        for (int i = 0; i < 6; i++) {
+            while (true) {
+                try {
+                    System.out.print("Enter integer " + (i + 1) + ": ");
+                    int number = Integer.parseInt(scanner.nextLine());
+                    L2.add(number);  
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                }
+            }
+        }
+
+       
+        System.out.println("LinkedHashSet L2: " + L2);
+
+
+	}
+}
+
+
+
+
+
+
+

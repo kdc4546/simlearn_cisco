@@ -1,0 +1,76 @@
+package cisco.java.program;
+
+interface Login {
+	 void register();
+	 void login();
+	}
+
+	//Cart Interface
+	interface Cart {
+	 void payment();
+	 void wallet();
+	}
+
+	//Logout Interface
+	interface Logout {
+	 void login();
+	 void out();
+	}
+
+	//Dashboard Interface
+	interface Dashboard {
+	 void register();
+	 void profile();
+	}
+
+	//Website Interface which extends all the above interfaces
+	interface Website extends Login, Cart, Logout, Dashboard {
+	 // All methods are inherited from the interfaces
+	}
+	class Ecommerce implements Website {
+
+		 @Override
+		 public void register() {
+		     System.out.println("User registered.");
+		 }
+
+		 @Override
+		 public void login() {
+		     System.out.println("User logged in.");
+		 }
+
+		 @Override
+		 public void payment() {
+		     System.out.println("Payment processed.");
+		 }
+
+		 @Override
+		 public void wallet() {
+		     System.out.println("Wallet functionality accessed.");
+		 }
+
+		 @Override
+		 public void out() {
+		     System.out.println("User logged out.");
+		 }
+
+		 @Override
+		 public void profile() {
+		     System.out.println("User profile viewed.");
+		 }
+	}
+
+public class Interface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Ecommerce ecommerce = new Ecommerce();
+	     ecommerce.register();
+	     ecommerce.login();
+	     ecommerce.payment();
+	     ecommerce.wallet();
+	     ecommerce.out();
+	     ecommerce.profile();
+
+	}
+}

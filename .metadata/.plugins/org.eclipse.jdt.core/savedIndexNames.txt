@@ -1,0 +1,13 @@
+INDEX VERSION 1.134+/Users/dkottapa/eclipse-workspace/.metadata/.plugins/org.eclipse.jdt.core
+1979366339.index
+3301096118.index
+1918755650.index
+1957933966.index
+1653131402.index
+2739476530.index
+3854715742.index
+3414768969.index
+1535604845.index
+451817968.index
+1865797976.index
+308947112.index

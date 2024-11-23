@@ -1,0 +1,60 @@
+package cisco.java.program;
+
+import java.util.LinkedHashSet;
+import java.util.Scanner;
+
+public class LinkedHashSetExample {
+	
+}
+public class Interface {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedHashSet<Object> L1 = new LinkedHashSet<>();
+
+        // Add elements to L1 (int, float, char, boolean)
+        L1.add(10);           // int
+        L1.add(20);           // int
+        L1.add(3.14f);        // float
+        L1.add(1.618f);       // float
+        L1.add('A');          // char
+        L1.add('B');          // char
+        L1.add(true);         // boolean
+
+        // Display elements of L1
+        System.out.println("LinkedHashSet L1: " + L1);
+
+        // Create LinkedHashSet L2
+        LinkedHashSet<Integer> L2 = new LinkedHashSet<>();
+
+        // Create Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Get 10 random integers from user input for L2
+        System.out.println("Enter 10 different integers for LinkedHashSet L2:");
+
+        for (int i = 0; i < 10; i++) {
+            while (true) {
+                try {
+                    System.out.print("Enter integer " + (i + 1) + ": ");
+                    int number = Integer.parseInt(scanner.nextLine());
+                    L2.add(number);  // Add the number to L2
+                    break;
+                } catch (NumberFormatException e) {
+                    System.out.println("Invalid input. Please enter a valid integer.");
+                }
+            }
+        }
+
+        // Display elements of L2
+        System.out.println("LinkedHashSet L2: " + L2);
+
+
+	}
+}
+
+
+
+
+
+

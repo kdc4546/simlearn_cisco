@@ -1,0 +1,61 @@
+package cisco.java.program;
+
+import java.util.ArrayList;
+import java.util.Collections;
+
+public class array {
+	    public static void main(String[] args) {
+	       
+	        ArrayList<String> list = new ArrayList<>();
+	        
+	        list.add("Apple");
+	        list.add("Banana");
+	        list.add("Mango");
+	        list.add("Grapes");
+	        list.add("Pineapple");
+	        list.add("Orange");
+
+	        list.add("India");
+	        list.add("Paris");
+
+	        list.add("Reading");
+	        list.add("Singing");
+
+	        System.out.println("ArrayList: " + list);
+
+	        list.remove("Singing");
+
+	        if (list.contains("cricket")) {
+	            System.out.println("Found 'cricket' in the list.");
+	        } else {
+	            System.out.println("'cricket' not found in the list.");
+	        }
+
+	        list.remove("Paris");  
+	        list.remove("Mango");  
+
+	       
+	        if (list.size() > 5) {
+	            System.out.println("4th element: " + list.get(3));
+	            System.out.println("6th element: " + list.get(5));
+	        } else {
+	            System.out.println("Not enough elements to display 4th and 6th elements.");
+	        }
+
+	        
+	        list.add("Dancing");
+
+	       
+	        Collections.reverse(list);
+	        System.out.println("Reversed ArrayList: " + list);
+
+	       
+	        list.add(3, "Kerala");  
+	        list.add(1, "Mango");   
+	        
+	        System.out.println("Final ArrayList: " + list);
+	    }
+	}
+
+
+

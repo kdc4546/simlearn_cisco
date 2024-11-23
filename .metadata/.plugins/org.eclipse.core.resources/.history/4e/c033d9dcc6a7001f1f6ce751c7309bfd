@@ -1,0 +1,20 @@
+package cisco.java.program;
+
+public class Variables {
+	
+
+	    public int interest(int p, int r, int t) {
+	        int SI = (p * r * t) / 100;  
+	        int Amt = SI + p;  
+	        System.out.println("The Simple Interest = " + SI);
+	        System.out.println("The Total Amount = " + Amt);
+	        return SI;
+	    }
+
+	    public static void main(String[] args) {
+	        Variables var = new Variables();
+	        var.interest(20, 40, 50);
+
+	}
+
+}

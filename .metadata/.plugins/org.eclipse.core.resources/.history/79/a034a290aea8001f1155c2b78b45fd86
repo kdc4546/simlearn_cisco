@@ -1,0 +1,92 @@
+package Linkedlist;
+
+import java.util.LinkedList;
+import java.util.Iterator;
+
+public class linkedlist {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		LinkedList<String> months = new LinkedList<>();
+
+        // Add the months to the LinkedList as per the requirements
+        months.add("May");
+        months.add("June");
+        months.add("July");
+        months.add("August");
+        months.add("April");
+        months.add("November");
+
+        // Add 'December' month as last
+        months.addLast("December");
+
+        // Add 'January' month as first
+        months.addFirst("January");
+
+        // Add 'March' and then 'February' using index-based insertion
+        months.add(2, "March");   // Adding 'March' at index 2
+        months.add(3, "February"); // Adding 'February' at index 3
+
+        // Add 'September' and then 'October' using index-based insertion
+        months.add(5, "September");  // Adding 'September' at index 5
+        months.add(6, "October");    // Adding 'October' at index 6
+
+        // (1) Print the LinkedList in such a way that the proper order of months is displayed
+        System.out.println("Linked List of Months: " + months);
+
+        // (2) Get all the even months and print them (Months with even numbers)
+        System.out.println("\nEven Months:");
+        for (int i = 1; i < months.size(); i += 2) {
+            System.out.println(months.get(i));
+        }
+
+        // (3) Get all the odd months and print them (Months with odd numbers)
+        System.out.println("\nOdd Months:");
+        for (int i = 0; i < months.size(); i += 2) {
+            System.out.println(months.get(i));
+        }
+
+        // (4) Use iterator to fetch and print all months
+        System.out.println("\nUsing Iterator to fetch all months:");
+        Iterator<String> iterator = months.iterator();
+        while (iterator.hasNext()) {
+            System.out.println(iterator.next());
+        }
+
+        // (5) Print the first and last month of the year together
+        System.out.println("\nFirst and Last month of the year:");
+        System.out.println("First Month: " + months.getFirst());
+        System.out.println("Last Month: " + months.getLast());
+
+        // (6) Remove your birthday month (let's assume birthday month is 'July') from the LinkedList and print it
+        months.remove("July");
+        System.out.println("\nLinked List after removing 'July': " + months);
+
+        // (7) Check whether this LinkedList contains any winter month inside it or not?
+        // Winter months are typically December, January, and February
+        boolean containsWinterMonth = months.contains("December") || months.contains("January") || months.contains("February");
+        System.out.println("\nDoes the LinkedList contain any winter month? " + (containsWinterMonth ? "Yes" : "No"));
+
+        // (8) Fetch the first and last months using peek()
+        System.out.println("\nUsing peek() to fetch the first and last months:");
+        System.out.println("First Month (peek): " + months.peekFirst());
+        System.out.println("Last Month (peek): " + months.peekLast());
+
+        // (9) Remove the first and last months using poll()
+        System.out.println("\nRemoving the first and last months using poll():");
+        String firstMonth = months.pollFirst();
+        String lastMonth = months.pollLast();
+        System.out.println("Removed First Month: " + firstMonth);
+        System.out.println("Removed Last Month: " + lastMonth);
+        System.out.println("Linked List after removal: " + months);
+    }
+}
+
+
+		
+
+
+		 
+
+
+

@@ -1,0 +1,17 @@
+package cisco.java.program;
+
+public class Variables {
+	
+	public void area(int len,int ber) {
+		int result = len * ber;
+		System.out.println("The area = " + result);
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Variables var = new Variables();
+		var.area(20,40);
+
+	}
+
+}
